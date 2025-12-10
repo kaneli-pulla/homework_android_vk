@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="pinterest_grid_columns">2</integer>
+    <integer name="pinterest_grid_prefetch_threshold">5</integer>
+    <integer name="cache_duration">15</integer>
+    <integer name="gifs_limit">25</integer>
+    <integer name="page_size">20</integer>
+    <integer name="default_offset">0</integer>
+    <integer name="connect_timeout">30</integer>
+    <integer name="read_timeout">30</integer>
+    <integer name="write_timeout">30</integer>
+    <integer name="api_default_limit">25</integer>
+    <integer name="api_default_offset">0</integer>
+    <integer name="memory_cache_max_size_percent">25</integer>
+    <integer name="disk_cache_max_size_percent">10</integer>
+    <integer name="gif_connection_timeout">5000</integer>
+</resources>

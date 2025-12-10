@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">APIapp</string>
+    <string name="retry_button_text">Повторить загрузку</string>
+    <string name="error_generic">Не удалось загрузить данные</string>
+    <string name="error_title">Произошла ошибка</string>
+    <string name="error_icon_content_description">Ошибка</string>
+    <string name="retry">Повторить</string>
+    <string name="retry_icon_content_description">Повторить</string>
+    <string name="gif_item_text">GIF-изображение №%1$d</string>
+    <string name="cache_size_format">Memory: %1$dMB, Disk: %2$dMB</string>
+    <string name="error_load_prefix">Ошибка загрузки</string>
+    <string name="error_search_prefix">Ошибка поиска</string>
+    <string name="error_unknown">Неизвестная ошибка</string>
+    <string name="error_api">Ошибка API: %1$d</string>
+    <string name="trending_cache_key_prefix">trending</string>
+    <string name="search_cache_key_format">%1$s_%2$d_%3$d</string>
+    <string name="trending_cache_key_format">trending_%1$d_%2$d</string>
+    <string name="trending_endpoint">gifs/trending</string>
+    <string name="search_endpoint">gifs/search</string>
+    <string name="api_default_rating">g</string>
+    <string name="api_default_lang">en</string>
+    <string name="base_url">https://api.giphy.com/v1/</string>
+</resources>
