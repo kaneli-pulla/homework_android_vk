@@ -24,6 +24,7 @@ fun PinterestGrid(
     loadMoreError: String? = null,
     onLoadMore: () -> Unit = {},
     onRetryLoadMore: () -> Unit = {},
+    onGifClick: (String) -> Unit = { _ -> },
     modifier: Modifier = Modifier,
     columns: Int = LocalContext.current.resources.getInteger(R.integer.pinterest_grid_columns)
 ) {
@@ -49,6 +50,7 @@ fun PinterestGrid(
             PinterestCard(
                 gifUrl = gifUrl,
                 index = index,
+                onGifClick = onGifClick,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(itemPadding)

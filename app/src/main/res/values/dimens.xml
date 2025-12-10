@@ -10,4 +10,8 @@
     <dimen name="error_screen_bottom_padding">24dp</dimen>
     <dimen name="error_screen_spacing">8dp</dimen>
     <dimen name="gif_connection_timeout">5000dp</dimen>
+    <dimen name="detail_screen_padding">16dp</dimen>
+    <dimen name="detail_screen_elevation">24dp</dimen>
+    <dimen name="close_button_padding">24dp</dimen>
+    <dimen name="close_button_size">48dp</dimen>
 </resources>

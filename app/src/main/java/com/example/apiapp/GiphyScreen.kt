@@ -8,6 +8,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -19,6 +23,8 @@ fun GiphyScreen(viewModel: GiphyViewModel = viewModel()) {
     val isLoadingMore = viewModel.isLoadingMore.collectAsState().value
     val error = viewModel.error.collectAsState().value
     val loadMoreError = viewModel.loadMoreError.collectAsState().value
+
+    var selectedGifUrl by remember { mutableStateOf<String?>(null) }
 
     LaunchedEffect(Unit) {
         if (gifUrls.isEmpty() && error == null) {
@@ -54,6 +60,7 @@ fun GiphyScreen(viewModel: GiphyViewModel = viewModel()) {
                         loadMoreError = loadMoreError,
                         onLoadMore = { viewModel.loadMore() },
                         onRetryLoadMore = { viewModel.retryLoad() },
+                        onGifClick = { url -> selectedGifUrl = url },
                         modifier = Modifier.fillMaxSize(),
                         columns = 2
                     )
@@ -64,6 +71,15 @@ fun GiphyScreen(viewModel: GiphyViewModel = viewModel()) {
                         modifier = Modifier.align(Alignment.Center)
                     )
                 }
+            }
+
+            if (selectedGifUrl != null) {
+                DetailScreen(
+                    gifUrl = selectedGifUrl!!,
+                    onClose = {
+                        selectedGifUrl = null
+                    }
+                )
             }
         }
     }
